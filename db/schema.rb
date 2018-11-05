@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_11_05_215835) do
     t.string "origin"
     t.integer "quantity"
     t.integer "price"
-    t.string "description"
+    t.text "description"
     t.bigint "seller_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
