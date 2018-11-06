@@ -1,2 +1,12 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+
+
+<h1>New user</h1>
+
+<% if @user.errors.any? %>
+<p>You have the following errors:</p>
+  <%= @user.errors.messages %>
+<% end %>
+
+<%= render 'form', user: @user %>
+
+<%= link_to 'Back', root_path %>
