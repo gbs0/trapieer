@@ -1,4 +1,3 @@
-
 Rails.application.routes.draw do
   root to: 'pages#home'
   get 'products', to: 'products#index', as: 'products' #If user id are not set(on controller)
