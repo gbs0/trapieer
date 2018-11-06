@@ -1,2 +1,19 @@
 <h1>Products#index</h1>
 <p>Find me in app/views/products/index.html.erb</p>
+
+<div class="container">
+  <div class="row">
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="card" id="anchor" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?product');">
+          <div class="card-description">
+            <h2><%= product.name %></h2>
+          </div>
+          <%= link_to "", user_product_path(product.user,product), class: 'card-link' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  </div>
+</div>
