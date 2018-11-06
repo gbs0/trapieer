@@ -18,9 +18,12 @@ gem 'webpacker'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
+  gem 'faker'
 end
 
 group :development, :test do
+	gem 'rspec-core'	
+	gem 'pg_tester'
   gem 'pry-byebug'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'

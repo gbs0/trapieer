@@ -1,3 +1,4 @@
 class Transaction < ApplicationRecord
-  belongs_to :user, :product
+  belongs_to :user
+  belongs_to :product
 end

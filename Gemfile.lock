@@ -62,6 +62,8 @@ GEM
       railties (>= 3.2, < 6.0)
     erubi (1.7.1)
     execjs (2.7.0)
+    faker (1.9.1)
+      i18n (>= 0.7)
     ffi (1.9.25)
     font-awesome-sass (5.0.13)
       sassc (>= 1.11)
@@ -93,6 +95,8 @@ GEM
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
     pg (0.21.0)
+    pg_tester (0.1.0)
+      pg (~> 0.18, >= 0.18.2)
     pry (0.12.0)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -136,6 +140,9 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     redis (4.0.3)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
     sass (3.6.0)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -193,15 +200,18 @@ DEPENDENCIES
   bootsnap
   bootstrap-sass (~> 3.3)
   dotenv-rails
+  faker
   font-awesome-sass (~> 5.0.9)
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)
+  pg_tester
   pry-byebug
   pry-rails
   puma
   rails (= 5.2.1)
   redis
+  rspec-core
   sass-rails
   simple_form
   spring
