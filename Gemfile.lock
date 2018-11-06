@@ -138,6 +138,9 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     redis (4.0.3)
+    rspec-core (3.8.0)
+      rspec-support (~> 3.8.0)
+    rspec-support (3.8.0)
     sass (3.6.0)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -205,6 +208,7 @@ DEPENDENCIES
   puma
   rails (= 5.2.1)
   redis
+  rspec-core
   sass-rails
   simple_form
   spring
