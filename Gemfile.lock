@@ -93,6 +93,8 @@ GEM
     nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
     pg (0.21.0)
+    pg_tester (0.1.0)
+      pg (~> 0.18, >= 0.18.2)
     pry (0.12.0)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -197,6 +199,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
   pg (~> 0.21)
+  pg_tester
   pry-byebug
   pry-rails
   puma
