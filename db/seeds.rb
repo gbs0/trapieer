@@ -6,47 +6,37 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning database...'
-Cocktail.destroy_all
-Ingredient.destroy_all
-Dose.destroy_all
-
-puts 'Creating cocktails...'
-cocktails_attributes = [
-  {
-    name:         'Spicy Grand Margarita'
-  },
-  {
-    name:         'Marguierita'
-  },
-  {
-    name:         'Drinks'
-  },
-  {
-    name:         'Gym Martinho'
-  },
-  {
-    name:         'Dry Martinho'
-  },
-  {
-    name:         'Sake'
-  }
-]
-Cocktail.create!(cocktails_attributes)
-puts 'Finished!'
-
-puts 'Creating ingredients...'
-20.times do 
-	Ingredient.create(name: Faker::Food.fruits)
-end
-puts 'Finished!'
-puts 'Creating doses...'
+Product.destroy_all
+Transaction.destroy_all
+User.destroy_all
 # i = 0
-10.times do
-	Dose.create(
-		ingredient_id: Faker::Number.between(1, 10),
-		cocktail_id: 	Faker::Number.between(1, 10),
+
+puts 'Creating products...'
+
+20.times do
+	Product.create(
+		image: Faker::Avatar.image("hops", "300x300"),
+		name: Faker::Beer.hop,
+		category: Faker::Beer.malts,
+		origin: 	Faker::Address.country,
+		quantity: Faker::Number.between(1, 50),
+		price: Faker::Commerce.price(range = 1..100.0, as_string = false),
 		description: 	Faker::RickAndMorty.quote,
-		nacionality: 	Faker::Address.country
+		user_id: Faker::Number.between(1, 5)
+	)
+end 
+puts  'Finished' 
+
+puts 'Creating users...'
+
+5.times do
+	User.create(
+		name: Faker::Name.name,
+		address: Faker::Address.full_address,
+		email: Faker::Internet.email,
+		password: Faker::Internet.password,
+		balance: Faker::Commerce.price(range = 1..2000.0, as_string = false),
+		avatar: Faker::Avatar.image("my-own-slug", "50x50")
 	)
 end 
 puts  'Finished' 

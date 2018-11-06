@@ -1,4 +1,4 @@
 class Transaction < ApplicationRecord
-  belongs_to :user, :product
-  # Uma transação não poderia ter vários produtos ? (: 
+  belongs_to :user
+  belongs_to :product
 end
