@@ -11,22 +11,6 @@ Transaction.destroy_all
 User.destroy_all
 # i = 0
 
-puts 'Creating products...'
-
-20.times do
-	Product.create(
-		image: Faker::Avatar.image("hops", "300x300"),
-		name: Faker::Beer.hop,
-		category: Faker::Beer.malts,
-		origin: 	Faker::Address.country,
-		quantity: Faker::Number.between(1, 50),
-		price: Faker::Commerce.price(range = 1..100.0, as_string = false),
-		description: 	Faker::RickAndMorty.quote,
-		user_id: Faker::Number.between(1, 5)
-	)
-end 
-puts  'Finished' 
-
 puts 'Creating users...'
 
 5.times do
@@ -38,5 +22,20 @@ puts 'Creating users...'
 		balance: Faker::Commerce.price(range = 1..2000.0, as_string = false),
 		avatar: Faker::Avatar.image("my-own-slug", "50x50")
 	)
-end 
-puts  'Finished' 
+end
+
+puts 'Creating products...'
+
+20.times do
+  Product.create(
+    image: Faker::Avatar.image("hops", "300x300"),
+    name: Faker::Beer.hop,
+    category: Faker::Beer.malts,
+    origin:   Faker::Address.country,
+    quantity: Faker::Number.between(1, 50),
+    price: Faker::Commerce.price(range = 1..100.0, as_string = false),
+    description:  Faker::RickAndMorty.quote,
+    user_id: Faker::Number.between(1, 5)
+  )
+end
+puts  'Finished'
