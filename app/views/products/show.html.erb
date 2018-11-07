@@ -1,2 +1,27 @@
-<h1>Products#show</h1>
-<p>Find me in app/views/products/show.html.erb</p>
+<!-- <p id="notice"><%= notice %></p> -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6">
+      <div class="product-photo">
+        <div class="card" style="background-image: url(<%=@product.imgage%>);">
+        </div>
+      </div>
+    </div>
+
+  <div class="col-xs-12 col-sm-6">
+    <div class="product-components">
+      <h2><%= @product.name %></h2>
+      <p>Infos</p>
+    </div>
+  </div>
+
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <p><%= link_to 'Back', root_path %></p>
+  </div>
+</div>
