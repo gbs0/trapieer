@@ -7,12 +7,12 @@
 
   <div class="col-xs-12 col-sm-6">
     <div class="product-components">
-      <h2><%=@product.name%></h2>
-      <p><%=@product.origin%></p>
+      <h2><%=@product.name.capitalize%></h2>
+      <p><%=@product.origin.capitalize%></p>
       <p><%=@product.description%></p>
-      <p><%=@product.quantity%></p>
-      <p><%=@product.price%></p>
-      <a href="#" class="btn-treehouse">Buy now</a>
+      <p>Quantidade: <%=@product.quantity%></p>
+      <p>R$ <%=@product.price%></p>
+      <p><%= link_to 'Comprar', new_user_registration_path, class: "btn-treehouse" %></p>
 
     </div>
   </div>
@@ -24,7 +24,7 @@
 
 <div class="container">
   <div class="row">
-    <p><%= link_to 'Back', root_path %></p>
+    <p><%= link_to 'Back', products_path, class: "btn btn-danger" %></p>
   </div>
 </div>
 
