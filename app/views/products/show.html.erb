@@ -2,16 +2,13 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <!-- <div class="product-photo"> -->
-        <div class="card" style="background-image: url('https://robohash.org/hops.png?size=300x300&set=set1');">
-
-        </div>
-      <!-- </div> -->
+      <div class="card" style="background-image: url(<% @product.image %>);">
+      </div>
     </div>
 
   <div class="col-xs-12 col-sm-6">
     <div class="product-components">
-      <h2>Product Name</h2>
+      <h2>@product.name</h2>
       <p>Infos</p>
     </div>
   </div>

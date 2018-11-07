@@ -10,7 +10,7 @@
           <div class="card-description">
             <h2><%= product.name %></h2>
           </div>
-          <%= link_to "", user_product_path(product.user,product), class: 'card-link' %>
+          <%= link_to "", product_path(product.id), class: 'card-link' %>
         </div>
       </div>
     <% end %>
