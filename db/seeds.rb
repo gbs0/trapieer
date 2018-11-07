@@ -12,7 +12,7 @@ puts 'creating seed'
   )
 
   Product.create(
-    image: "https://picsum.photos/200/200?&< xpto = ${x} >",
+    image: "https://as1.ftcdn.net/jpg/01/21/56/92/500_F_121569280_8OaTUKSA18R5UAm0K8Iy2QXmjJfxOhYN.jpg",
     name: 'levedo bom pra caramba',
     category: 'levedura',
     origin:   'thailandia',
