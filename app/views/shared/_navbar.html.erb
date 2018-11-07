@@ -10,8 +10,6 @@
       <%= link_to "Meus Produtos", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Vender Produtos", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Vender Produtos", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-      
-
 
       <!-- Avatar with dropdown menu -->
       <div class="navbar-wagon-item">
@@ -39,21 +37,22 @@
     <% else %>
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+       <!-- Dropdown appearing on mobile only -->
+        <div class="navbar-wagon-item hidden-md hidden-lg">
+          <div class="dropdown">
+            <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
+            <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+              <li><a href="#">Host</a></li>
+              <li><a href="#">Trips</a></li>
+              <li><a href="#">Messagese</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     <% end %>
   </div>
   <% end %>
   
 
 
-  <!-- Dropdown appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Host</a></li>
-        <li><a href="#">Trips</a></li>
-        <li><a href="#">Messagese</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+ 
