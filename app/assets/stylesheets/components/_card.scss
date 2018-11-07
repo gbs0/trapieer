@@ -1,3 +1,8 @@
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+
 .card {
   height: 200px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
