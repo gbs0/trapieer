@@ -26,7 +26,7 @@ end
 
 puts 'Creating products...'
 
-20.times do
+10.times do
   Product.create(
     image: Faker::Avatar.image("hops", "300x300"),
     name: Faker::Beer.hop,
