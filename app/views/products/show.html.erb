@@ -2,14 +2,18 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <div class="card" style="background-image: url(<% @product.image %>);">
-      </div>
+      <%= image_tag @product.image %>
     </div>
 
   <div class="col-xs-12 col-sm-6">
     <div class="product-components">
-      <h2>@product.name</h2>
-      <p>Infos</p>
+      <h2><%=@product.name%></h2>
+      <p><%=@product.origin%></p>
+      <p><%=@product.description%></p>
+      <p><%=@product.quantity%></p>
+      <p><%=@product.price%></p>
+      <a href="#" class="btn-treehouse">Buy now</a>
+
     </div>
   </div>
 
