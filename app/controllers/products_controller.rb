@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :set_user, :set_product
+  before_action :set_user,
+  # before_action :set_product, only: [:show]
 
   def new
     @product = Product.new
@@ -16,6 +17,7 @@ class ProductsController < ApplicationController
   end
 
   def show
+    set_product
   end
 
   # Rotas destroy, edit & update ñ serão utilizadas na apresentação
@@ -34,7 +36,7 @@ class ProductsController < ApplicationController
   end
 
   def set_product
-    # @product = Product.find(params[:id])
+    @product = Product.find(params[:id])
   end
 
   def product_params

@@ -23,7 +23,7 @@ end
 
 10.times do
   Product.create(
-    image: "https://picsum.photos/200/200?&< xpto = ${x} >",
+    image: "https://picsum.photos/200/200>",
     name: Faker::Beer.hop,
     category: Faker::Beer.malts,
     origin:   Faker::Address.country,
