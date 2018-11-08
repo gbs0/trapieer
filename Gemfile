@@ -8,6 +8,7 @@ gem 'puma'
 gem 'rails', '5.2.1'
 gem 'redis'
 gem 'devise'
+gem 'cloudinary'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
@@ -23,7 +24,7 @@ group :development do
 end
 
 group :development, :test do
-	gem 'rspec-core'	
+	gem 'rspec-core'
 	gem 'pg_tester'
   gem 'pry-byebug'
   gem 'pry-rails'

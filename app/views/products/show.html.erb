@@ -2,9 +2,15 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <%= image_tag @product.image %>
+
+      <%= @product.image %>
+      <%= image_tag 'https://picsum.photos/300/300' %>
+      <%= cl_image_tag("hxl2z66hp4jcvavfhn4x",
+      width: 400, height: 300, crop: :fill) %>
+
     </div>
 
+<<<<<<< HEAD
     <div class="col-xs-12 col-sm-6">
       <div class="product-components">
         <h2><%=@product.name.capitalize%></h2>
@@ -17,8 +23,32 @@
       </div>
     </div>
   </div>
+=======
+  <div class="col-xs-12 col-sm-6">
+    <div class="product-components">
+      <h2><%=@product.name.capitalize%></h2>
+      <p><%=@product.origin.capitalize%></p>
+      <p><%=@product.description%></p>
+      <p>Quantidade: <%=@product.quantity%></p>
+      <p>R$ <%=@product.price%></p>
+      <p><%= link_to 'Comprar', new_user_registration_path, class: "btn-treehouse" %></p>
+      <p><%= link_to 'Back', products_path, class: "btn btn-danger" %></p>
+      <h2><%=@product.name%></h2>
+      <p>Infos</p>
+    </div>
+  </div>
+  </div>
+>>>>>>> 0ec684e3fdb213608cec1a4fdafb700b7c03305e
 </div>
 
 
 
+<<<<<<< HEAD
+=======
+<div class="container">
+  <div class="row">
+
+  </div>
+</div>
+>>>>>>> 0ec684e3fdb213608cec1a4fdafb700b7c03305e
 
