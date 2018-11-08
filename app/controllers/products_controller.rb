@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
-  before_action :set_user
+  before_action :set_user,
+  # before_action :set_product, only: [:show]
 
   def new
     @product = Product.new
@@ -49,6 +50,7 @@ class ProductsController < ApplicationController
   end
 
   def set_product
+    @product = Product.find(params[:id])
   end
 
   def product_params
@@ -62,20 +64,6 @@ class ProductsController < ApplicationController
       Rails.application.assets_manifest.assets[path].present?
     end
   end
-
 end
 
 
-  # create_table "products", force: :cascade do |t|
-  #   t.string "image"
-  #   t.string "name"
-  #   t.string "category"
-  #   t.string "origin"
-  #   t.integer "quantity"
-  #   t.integer "price"
-  #   t.text "description"
-  #   t.bigint "user_id"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  #   t.index ["user_id"], name: "index_products_on_user_id"
-  # end

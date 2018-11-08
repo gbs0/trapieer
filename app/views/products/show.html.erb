@@ -14,10 +14,11 @@
       <p>Quantidade: <%=@product.quantity%></p>
       <p>R$ <%=@product.price%></p>
       <p><%= link_to 'Comprar', new_user_registration_path, class: "btn-treehouse" %></p>
-
+      <p><%= link_to 'Back', products_path, class: "btn btn-danger" %></p>
+      <h2><%=@product.name%></h2>
+      <p>Infos</p>
     </div>
   </div>
-
   </div>
 </div>
 
@@ -25,7 +26,7 @@
 
 <div class="container">
   <div class="row">
-    <p><%= link_to 'Back', products_path, class: "btn btn-danger" %></p>
+    
   </div>
 </div>
 
