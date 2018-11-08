@@ -6,9 +6,23 @@ class ProductsController < ApplicationController
   end
 
   def create
-    product = Product.new(product_params)
-    product.save
-    redirect_to user_product_path(product)
+    @user = current_user
+    @product = Product.new(product_params)
+    @product.user = @user
+
+    unless asset_exist?(@product.image)
+      @product.image = 'https://picsum.photos/200/300'
+    end
+
+    if
+    @product.save
+    redirect_to product_path(@product), notice: "Seu produto foi adicionado"
+    else
+    flash[:alert] = "Error"
+    render :new
+    end
+
+
   end
 
   def index
@@ -41,7 +55,13 @@ class ProductsController < ApplicationController
     params.require(:product).permit( :image, :name, :category, :origin, :quantity, :price, :description )
   end
 
-
+  def asset_exist?(path)
+    if Rails.configuration.assets.compile
+      Rails.application.precompiled_assets.include? path
+    else
+      Rails.application.assets_manifest.assets[path].present?
+    end
+  end
 
 end
 
