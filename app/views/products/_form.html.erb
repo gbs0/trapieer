@@ -1,18 +1,26 @@
-<%= simple_form_for(@product) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1> Cadastre seu Produto </h1>
+      <p id="sub-cadastro"> Preencha o formulário para cadastrar seu insumo </p>
+      <%= simple_form_for(@product) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-  <div class="form-inputs">
-    <%= f.input :image %>
-    <%= f.input :name %>
-    <%= f.input :category %>
-    <%= f.input :origin %>
-    <%= f.input :quantity %>
-    <%= f.input :price %>
-    <%= f.input :description %>
-  </div>
+        <div class="form-inputs">
+          <%= f.input :image %>
+          <%= f.input :name %>
+          <%= f.input :category %>
+          <%= f.input :origin %>
+          <%= f.input :quantity %>
+          <%= f.input :price %>
+          <%= f.input :description %>
+        </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+        <div class="form-actions">
+          <%= f.button :submit %>
+        </div>
+      <% end %>
+    </div>
   </div>
-<% end %>
+</div>
