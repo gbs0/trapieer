@@ -23,14 +23,14 @@ end
 
 10.times do
   Product.create(
-    image: "https://picsum.photos/200/200>",
-    name: Faker::Beer.hop,
-    category: Faker::Beer.malts,
-    origin:   Faker::Address.country,
-    quantity: Faker::Number.between(1, 50),
-    price: Faker::Commerce.price(range = 1..100.0, as_string = false),
-    description:  Faker::RickAndMorty.quote,
-    user_id: rand(1..5)
+    image: "https://as1.ftcdn.net/jpg/01/21/56/92/500_F_121569280_8OaTUKSA18R5UAm0K8Iy2QXmjJfxOhYN.jpg",
+    name: 'levedo bom pra caramba',
+    category: 'levedura',
+    origin:   'thailandia',
+    quantity: 10,
+    price: 100,
+    description:  'huasdjiaskodoksdfhdskofdsok dsfksdfsdfk ds',
+    user_id: User.find_by_name('breno').id
   )
 end
 puts  'Finished'

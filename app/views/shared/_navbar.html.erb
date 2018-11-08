@@ -1,10 +1,9 @@
  <div class="navbar-wagon">
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <img src="http://is1.mzstatic.com/image/pf/us/r30/Purple5/v4/1a/62/69/1a6269e8-fc4d-409b-5c89-c4b38696cc5d/mzl.jmfbkbfo.png" alt="logo">
+    <i id="logo-nav" class="fab fa-pagelines" ></i>
     <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
-
       <!-- Links when logged in -->
       <%= link_to "Histórico", "#", class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Meus Produtos", "#", class: "navbar-wagon-item navbar-wagon-link" %>
@@ -38,7 +37,7 @@
       <!-- Login link (when logged out) -->
       <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
        <!-- Dropdown appearing on mobile only -->
-        <div class="navbar-wagon-item hidden-md hidden-lg">
+        <!-- <div class="navbar-wagon-item hidden-md hidden-lg">
           <div class="dropdown">
             <i class="fas fa-bars dropdown-toggle" data-toggle="dropdown" role="button"></i>
             <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
@@ -48,11 +47,11 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
     <% end %>
   </div>
   <% end %>
-  
+  </div>
 
 
  
