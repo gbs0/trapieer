@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
-	has_many :transactions
-  # belongs_to :user_id, foreign_key: 'author_id'
+  mount_uploader :image, ImageUploader
+  has_many :transactions
   belongs_to :user
+
 end
