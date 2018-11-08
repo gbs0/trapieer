@@ -27,7 +27,7 @@ puts 'creating user'
     avatar: Faker::Avatar.image("my-own-slug", "50x50")
   )
 puts 'creating product'
-  Product.create(
+  product = Product.create(
     image: 'image/upload/v1541692487/ngfqmiujsrwlhlmvu66l.jpg',
     name: 'levedo de qualidade duvidosa',
     category: 'levedura',

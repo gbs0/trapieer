@@ -17,7 +17,6 @@ class ProductsController < ApplicationController
 
 
     if @product.save
-    raise
     redirect_to product_path(@product), notice: "Seu produto foi adicionado"
     else
     flash[:alert] = "Error"
