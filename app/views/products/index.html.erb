@@ -2,8 +2,15 @@
   <div class="row">
   <div class="row">
     <% @products.each do |product| %>
+
+      <% if product.image.present?  %>
+      <%   x = product.image %>
+      <% else %>
+      <%   x = 'ngfqmiujsrwlhlmvu66l'  %>
+      <% end %>
+
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="card" id="anchor" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(product.image);">
+        <div class="card" id="anchor" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path x %> ) ;">
           <div class="card-description">
             <h2><%= product.name %></h2>
           </div>
@@ -14,3 +21,5 @@
   </div>
   </div>
 </div>
+
+

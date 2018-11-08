@@ -9,14 +9,15 @@ class ProductsController < ApplicationController
   def create
     @user = current_user
     @product = Product.new(product_params)
-    @product.user = @user
+    @product.user_id = current_user.id
 
-    unless asset_exist?(@product.image)
-      @product.image = 'https://picsum.photos/200/300'
-    end
+    # unless asset_exist?(@product.image)
+    #   @product.image = 'https://picsum.photos/200/300'
+    # end
 
-    if
-    @product.save
+
+    if @product.save
+    raise
     redirect_to product_path(@product), notice: "Seu produto foi adicionado"
     else
     flash[:alert] = "Error"
@@ -54,7 +55,8 @@ class ProductsController < ApplicationController
   end
 
   def product_params
-    params.require(:product).permit( :image, :name, :category, :origin, :quantity, :price, :description )
+    params.require(:product).permit( :name, :category, :origin, :quantity, :price, :description , :image, :image_cache)
+
   end
 
   def asset_exist?(path)
