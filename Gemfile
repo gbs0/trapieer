@@ -23,7 +23,8 @@ group :development do
 end
 
 group :development, :test do
-	gem 'rspec-core'	
+  gem 'dotenv-rails'
+	gem 'rspec-core'
 	gem 'pg_tester'
   gem 'pry-byebug'
   gem 'pry-rails'
