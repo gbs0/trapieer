@@ -2,7 +2,9 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <%= image_tag @product.image %>
+
+      <%= @product.image %>
+      <%= image_tag 'https://picsum.photos/300/300' %>
       <%= cl_image_tag("hxl2z66hp4jcvavfhn4x",
       width: 400, height: 300, crop: :fill) %>
 
