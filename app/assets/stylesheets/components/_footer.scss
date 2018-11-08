@@ -1,6 +1,6 @@
 .footer {
-  box-shadow: 0 0 1px;
-  background: white;
+  box-shadow: 0 0 2px;
+  background: #FCF1DF;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,8 +15,8 @@
   align-items: center;
 }
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: rgb(250,185,0);
+  opacity: 0.30;
   text-decoration: none;
   font-size: 24px;
   padding: 0px 10px;
@@ -25,6 +25,10 @@
   opacity: 1;
 }
 .footer .fa-beer {
-  color: #D23333;
+  color: rgb(250,185,0);
 }
 
+.fa-beer:before {
+    content: "\f0fc";
+    color: red;
+}
