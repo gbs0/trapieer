@@ -42,4 +42,7 @@
 </div>
 
 <!-- <p><%= link_to 'Registrar-se', new_user_registration_path, class: "btn btn-treehouse", id:"home-btn"%></p> -->
-<p><%= link_to 'Inscreva-se', new_product_path, class: "btn btn-treehouse animated swing delay-4s infinite", id:"home-btn"%></p>
+<% unless user_signed_in? %>
+  <p><%= link_to 'Inscreva-se', new_user_registration_path, class: "btn btn-treehouse ", id:"home-btn"%></p>
+<% end  %>
+
