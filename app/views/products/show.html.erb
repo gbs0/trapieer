@@ -15,7 +15,12 @@
       <p><%=@product.description%></p>
       <p>Quantidade: <%=@product.quantity%></p>
       <p>R$ <%=@product.price%></p>
-      <p><%= link_to 'Comprar', new_user_registration_path, class: "btn-treehouse" %></p>
+        <% if user_signed_in? %>
+          <% x = product_buy_path(params[:id])  %>
+        <% else %>
+          <% x = new_user_session_path %>
+        <% end %>
+      <p><%= link_to 'Comprar', x , class: "btn-treehouse" %></p>
       <p><%= link_to 'Back', products_path, class: "btn btn-danger" %></p>
     </div>
   </div>

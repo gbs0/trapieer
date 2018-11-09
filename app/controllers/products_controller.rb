@@ -34,6 +34,10 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def buy
+    redirect_to product_path(params[:product_id]), notice: "Parabéns, sua compra foi confirmada!"
+  end
+
   # Rotas destroy, edit & update ñ serão utilizadas na apresentação
   # def edit
   # end
