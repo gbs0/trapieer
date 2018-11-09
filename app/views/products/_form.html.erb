@@ -1,36 +1,25 @@
-<%= simple_form_for(@user) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.input :image %>
-    <%= f.input :name %>
-    <%= f.input :category %>
-    <%= f.input :origin %>
-    <%= f.input :quantity %>
-    <%= f.input :price %>
-    <%= f.input :description %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
-
-
-
-
-
-  # create_table "products", force: :cascade do |t|
-  #   t.string "image"
-  #   t.string "name"
-  #   t.string "category"
-  #   t.string "origin"
-  #   t.integer "quantity"
-  #   t.integer "price"
-  #   t.text "description"
-  #   t.bigint "user_id"
-  #   t.datetime "created_at", null: false
-  #   t.datetime "updated_at", null: false
-  #   t.index ["user_id"], name: "index_products_on_user_id"
-  # end
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1> Cadastre seu Produto </h1>
+      <p id="sub-cadastro"> Preencha o formulário para cadastrar seu insumo </p>
+      <%= simple_form_for(@product) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+        <br>
+        <div class="form-inputs">
+          <%= f.input :image %>
+          <%= f.input :name %>
+          <%= f.input :category %>
+          <%= f.input :origin %>
+          <%= f.input :quantity %>
+          <%= f.input :price %>
+          <%= f.input :description %>
+        </div>
+        <br>
+        <div class="form-actions">
+          <%= f.button :submit %>
+        </div>
+      <% end %>
+    </div>
+</div>

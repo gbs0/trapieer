@@ -2,7 +2,12 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-6">
-      <%= image_tag @product.image %>
+
+    <%if @product.image.present? %>
+      <%= cl_image_tag( @product.image,                 width: 300, height: 300, crop: :fill) %>
+      <%else%>
+      <%= cl_image_tag('ngfqmiujsrwlhlmvu66l',          width: 300, height: 300, crop: :fill) %>
+      <%end%>
     </div>
 
   <div class="col-xs-12 col-sm-6">
@@ -16,15 +21,7 @@
       <p><%= link_to 'Back', products_path, class: "btn btn-danger" %></p>
     </div>
   </div>
-
-  </div>
+</div>
 </div>
 
-
-
-<div class="container">
-  <div class="row">
-    
-  </div>
-</div>
 
