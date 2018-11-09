@@ -8,7 +8,7 @@
       <% else %>
       <%   x = 'ngfqmiujsrwlhlmvu66l'  %>
       <% end %>
-      <div class="col-xs-12 col-sm-6 col-md-3 card-product">
+      <div class="col-xs-12 col-sm-6 col-md-3 card-product animated fadeInLeft">
         <div class="card" id="anchor" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path x %> ) ;">
           <div class="card-description">
             <h2><%= product.name.capitalize %></h2>
@@ -21,12 +21,12 @@
           <h5>Tipo: <%= product.category.capitalize %></h5>
           <h5>Preço/Kg: $<%= product.price %></h5>
           <div class="stars">
-            <% 4.times do %>
+            <% rand(1...5).times do %>
               <i class="fas fa-star"></i>
             <% end %>
           </div>
         </div>
-          <%= link_to "Ver Mais", product_path(product.id), class: 'btn btn-primary card-btn'%>
+          <%= link_to "Ver Mais", product_path(product.id), class: 'btn btn-primary card-btn animated'%>
       </div>
     <% end %>
   </div>
