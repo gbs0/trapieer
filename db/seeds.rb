@@ -44,7 +44,7 @@ puts 'creating products'
 
     levedo = Product.create(
     name: 'levedo de qualidade',
-    category: 'levedo',
+    category: 'levedura',
     origin:   'brasil',
     quantity: 11,
     price: 15,
