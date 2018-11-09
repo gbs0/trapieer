@@ -9,7 +9,7 @@
         <br>
         <div class="form-inputs">
           <%= f.input :name %>
-          <%= f.input :category %>
+          <%= f.input :category,:collection => %w[lupulo malte levedura], required: true %>
           <%= f.input :origin %>
           <%= f.input :quantity %>
           <%= f.input :price %>
