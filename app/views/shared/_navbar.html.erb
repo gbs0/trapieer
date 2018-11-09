@@ -1,7 +1,13 @@
  <div class="navbar-wagon">
   <%= link_to root_path, class: "navbar-wagon-brand" do %>
     <i id="logo-nav" class="fab fa-pagelines" ></i>
+    <div id="wrap">
+      <form action="" autocomplete="on">
+        <input id="search" name="search" type="text" placeholder="Em que podemos lhe ajudar?"><input id="search_submit" value="Rechercher" type="submit">
+      </form>
+    </div>
     <!-- Right Navigation -->
+    
   <div class="navbar-wagon-right hidden-xs hidden-sm">
     <% if user_signed_in? %>
       <!-- Links when logged in -->
