@@ -10,6 +10,10 @@ class UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @products = current_user.products
+  end
+
   # acões edit e update não serão apresentadas
   # def edit
   # end
