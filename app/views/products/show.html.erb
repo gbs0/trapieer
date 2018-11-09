@@ -1,6 +1,6 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="container">
-  <h6>Home / Categorias /</h6>
+  <h6>Home / Categorias / <%= @product.category.capitalize %> / <strong><%= @product.name.capitalize %></strong></h6>
   <div class="show-product">
     <div class="row">
       <div class="col-xs-12 col-sm-6">
@@ -24,8 +24,8 @@
           <% else %>
             <% x = new_user_session_path %>
           <% end %>
-        <p><%= link_to 'Comprar', x , class: "btn btn-primary lgn-btn" %></p>
-        <p><%= link_to 'Back', products_path(category: @product.category), class: "btn btn-danger btn-sm", style: "opacity: 0.6"%></p>
+        <p><%= link_to 'Comprar', x , class: "btn btn-success lgn-btn" %></p>
+        <p><%= link_to 'Voltar', products_path(category: @product.category), class: "btn btn-danger btn-sm", style: "opacity: 0.6; width: 100px;"%></p>
       </div>
     </div>
   </div>
