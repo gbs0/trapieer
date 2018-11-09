@@ -1,27 +1,32 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="container">
-  <div class="row">
+  <h6>Home / Categorias /</h6>
+  <div class="show-product">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+      <div class="product-img">
+      <%if @product.image.present? %>
+        <%= cl_image_tag( @product.image,                 width: 300, height: 300, crop: :fill) %>
+        <%else%>
+        <%= cl_image_tag('ngfqmiujsrwlhlmvu66l',          width: 300, height: 300, crop: :fill) %>
+        <%end%>
+        </div>
+      </div>
     <div class="col-xs-12 col-sm-6">
-    <%if @product.image.present? %>
-      <%= cl_image_tag( @product.image,                 width: 300, height: 300, crop: :fill) %>
-      <%else%>
-      <%= cl_image_tag('ngfqmiujsrwlhlmvu66l',          width: 300, height: 300, crop: :fill) %>
-      <%end%>
-    </div>
-  <div class="col-xs-12 col-sm-6">
-    <div class="product-components">
-      <h2><%=@product.name.capitalize%></h2>
-      <p><%=@product.origin.capitalize%></p>
-      <p><%=@product.description%></p>
-      <p>Quantidade: <%=@product.quantity%></p>
-      <p>R$ <%=@product.price%></p>
-        <% if user_signed_in? %>
-          <% x = product_buy_path(params[:id])  %>
-        <% else %>
-          <% x = new_user_session_path %>
-        <% end %>
-      <p><%= link_to 'Comprar', x , class: "btn-treehouse" %></p>
-      <p><%= link_to 'Back', products_path(category: @product.category), class: "btn btn-danger" %></p>
+      <div class="product-components">
+        <h2><%=@product.name.capitalize%></h2>
+        <p>Origem: <%=@product.origin.capitalize%></p>
+        <p><%=@product.description%></p>
+        <p>Quantidade: <%=@product.quantity%>kg</p>
+        <p>R$ <%=@product.price%>/kg</p>
+          <% if user_signed_in? %>
+            <% x = product_buy_path(params[:id])  %>
+          <% else %>
+            <% x = new_user_session_path %>
+          <% end %>
+        <p><%= link_to 'Comprar', x , class: "btn btn-primary lgn-btn" %></p>
+        <p><%= link_to 'Back', products_path(category: @product.category), class: "btn btn-danger btn-sm", style: "opacity: 0.6"%></p>
+      </div>
     </div>
   </div>
 </div>
