@@ -27,7 +27,8 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
+    @category = params[:category]
+    @products = Product.where(category: @category)
   end
 
   def show
