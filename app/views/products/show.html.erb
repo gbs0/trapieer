@@ -21,7 +21,7 @@
           <% x = new_user_session_path %>
         <% end %>
       <p><%= link_to 'Comprar', x , class: "btn-treehouse" %></p>
-      <p><%= link_to 'Back', products_path, class: "btn btn-danger" %></p>
+      <p><%= link_to 'Back', products_path(category: @product.category), class: "btn btn-danger" %></p>
     </div>
   </div>
 </div>
