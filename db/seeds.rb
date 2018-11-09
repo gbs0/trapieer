@@ -32,7 +32,7 @@ puts 'creating products'
 
   malte = Product.create(
     name: 'malte de qualidade',
-    category: 'malte fresco',
+    category: 'malte',
     origin:   'thailandia',
     quantity: 10,
     price: 10,
@@ -44,7 +44,7 @@ puts 'creating products'
 
     levedo = Product.create(
     name: 'levedo de qualidade',
-    category: 'levedo fresco',
+    category: 'levedo',
     origin:   'brasil',
     quantity: 11,
     price: 15,
@@ -56,7 +56,7 @@ puts 'creating products'
 
     lupulo = Product.create(
     name: 'lupulo de qualidade',
-    category: 'lupulo fresco',
+    category: 'lupulo',
     origin:   'japão',
     quantity: 12,
     price: 20,
