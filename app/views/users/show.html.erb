@@ -1,1 +1,39 @@
-<h1><%= @products.first.name %></h1>
+<h2><%= current_user.name %>, seguem seus produtos </h2>
+
+<div class="container">
+  <h6>home / meus produtos
+  <div class="row">
+  <div class="row">
+    <% @products.each do |product| %>
+      <% if product.image.present?  %>
+      <%   x = product.image %>
+      <% else %>
+      <%   x = 'ngfqmiujsrwlhlmvu66l'  %>
+      <% end %>
+      <div class="col-xs-12 col-sm-6 col-md-3 card-product animated fadeInLeft">
+        <div class="card" id="anchor" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path x %> ) ;">
+          <div class="card-description">
+            <h2><%= product.name.capitalize %></h2>
+
+          </div>
+          <%= link_to "", product_path(product.id), class: 'card-link' %>
+        </div>
+        <div class="card-params">
+          <div class="product-details">
+            <h5>Origem: <%= product.origin.capitalize %></h5>
+            <h5>Tipo: <%= product.category.capitalize %></h5>
+            <h5>Preço/Kg: $<%= product.price %></h5>
+            <h5>Anunciado há: <strong><%= rand(10..31) %><strong> dias</h5>
+          </div>
+          <div class="stars">
+            <% rand(1...5).times do %>
+              <i class="fas fa-star"></i>
+            <% end %>
+          </div>
+          <div class="product-btn"><%= link_to "Ver Mais", product_path(product.id), class: 'btn btn-primary card-btn animated'%></div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  </div>
+</div>
