@@ -1,10 +1,10 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <div class="container">
   <h6>Home / Categorias / <%= @product.category.capitalize %> / <strong><%= @product.name.capitalize %></strong></h6>
-  <div class="show-product">
+  <div class="show-product animated fadeInUp slow">
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-      <div class="product-img">
+      <div class="product-img animated fadeInLeft slow">
       <%if @product.image.present? %>
         <%= cl_image_tag( @product.image,                 width: 300, height: 300, crop: :fill) %>
         <%else%>
@@ -30,6 +30,21 @@
     </div>
   </div>
 </div>
+  <div class="animated fadeInLeft slow" id="map" style="width:100%;height:500px"></div>
+    <script>
+    function myMap() {
+    var mapCanvas = document.getElementById("map");
+    var myCenter = new google.maps.LatLng(-23.551378,-46.638090);
+      var mapOptions = {center: myCenter, zoom: 15};
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var marker = new google.maps.Marker({
+        position: myCenter,
+        animation: google.maps.Animation.BOUNCE});
+      marker.setMap(map);
+    }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBV11HPtIcmMl4mTFeD1fz75ZXj2cFrnJ8&callback=myMap"></script>
 </div>
 
 
