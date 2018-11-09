@@ -1,5 +1,5 @@
 .banner {
-  height: 60vh;
+  height: 70vh;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -11,15 +11,25 @@
     color: white;
     font-weight: bold;
     font-size: 45px;
+    margin-top: 100px;
   }
   p {
     color: white;
     opacity: .8;
     font-size: 25px;
     font-weight: lighter;
-    margin-bottom: 30px;
+    margin-bottom: 160px;
   }
   .btn {
     padding: 15px 50px;
+  }
+
+  .icon {
+    margin-bottom: -10vh;
+  }
+
+  #down-icon {
+    font-size: xx-large;
+    color: white;
   }
 }
