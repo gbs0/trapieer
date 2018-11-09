@@ -9,6 +9,11 @@ h1 {
   text-align: center;
 }
 
+#links {
+  text-align: center;
+
+}
+
 .form-inputs {
   color: #5c636e;
   font-size: 15px;
@@ -17,3 +22,19 @@ h1 {
 .form-actions {
   text-align: center;
 }
+
+#sign_up {
+  text-align: center;
+}
+
+// referente a /users/sign_in
+.title {
+  color: #f7b633;
+  text-align: center;
+}
+
+// btn-warning de todo o app
+.lgn-btn {
+  box-shadow: 0px 1px 5px #212121b3;
+}
+
