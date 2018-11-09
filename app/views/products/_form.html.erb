@@ -8,13 +8,13 @@
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
         <br>
         <div class="form-inputs">
-          <%= f.input :image %>
           <%= f.input :name %>
           <%= f.input :category %>
           <%= f.input :origin %>
           <%= f.input :quantity %>
           <%= f.input :price %>
           <%= f.input :description %>
+          <%= f.input :image %>
         </div>
         <br>
         <div class="form-actions">
