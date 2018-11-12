@@ -4,7 +4,7 @@ development:
   api_key: ENV['CLOUDINARY_KEY']
   api_secret: ENV['CLOUDINARY_SECRET']
   enhance_image_tag: true
-  static_image_support: false
+  static_image_support: true
 production:
   cloud_name: ENV['CLOUDINARY_NAME']
   api_key: ENV['CLOUDINARY_KEY']
@@ -16,4 +16,4 @@ test:
   api_key: ENV['CLOUDINARY_KEY']
   api_secret: ENV['CLOUDINARY_SECRET']
   enhance_image_tag: true
-  static_image_support: false
+  static_image_support: true
