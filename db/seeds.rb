@@ -20,7 +20,7 @@ puts 'creating users'
     balance: 60 ,
     avatar: Faker::Avatar.image("my-own-slug", "50x50")
   )
-      User.create(
+    User.create(
     name: 'cleiton',
     address: 'paraiba',
     email: 'cleiton@gmail.com',
@@ -33,6 +33,7 @@ puts 'creating users'
 puts 'creating products'
 
   malte = Product.create(
+    image: 'https://valbier.com.br/image/cache/catalog/produtos/Malte_chateau_Pilsen_162-750x750.jpg',
     name: 'Château Pilsen',
     category: 'malte',
     origin:   'Belgica 🇧🇪',
@@ -41,10 +42,11 @@ puts 'creating products'
     description:  'Mussum Ipsum, cacilds vidis litro abertis. Leite de capivaris, leite de mula manquis sem cabeça. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Per aumento de cachacis, eu reclamis. Diuretics paradis num copo é motivis de denguis.',
     user_id: User.find_by_name('admar').id
   )
-  malte.remote_image_url = 'https://valbier.com.br/image/cache/catalog/produtos/Malte_chateau_Pilsen_162-750x750.jpg'
+  # malte.remote_image_url = ""; Add images on Model column
   malte.save
 
   malte0 = Product.create(
+    image: 'http://www.brejarte.com.br/loja/image/cache/catalog/malte-chateau-special-b-castle-malting-100g-ccc-220x220.jpg',
     name: 'Château Peated (Defumado)',
     category: 'malte',
     origin:   'Belgica 🇧🇪',
@@ -53,7 +55,7 @@ puts 'creating products'
     description:  'Mussum Ipsum, cacilds vidis litro abertis. Leite de capivaris, leite de mula manquis sem cabeça. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Per aumento de cachacis, eu reclamis. Diuretics paradis num copo é motivis de denguis.',
     user_id: User.find_by_name('admar').id
   )
-  malte0.remote_image_url = 'http://www.brejarte.com.br/loja/image/cache/catalog/malte-chateau-special-b-castle-malting-100g-ccc-220x220.jpg'
+  # malte0.remote_image_url = "";
   malte0.save
 
   # levedo = Product.create(
