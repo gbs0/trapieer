@@ -1,5 +1,5 @@
 <div class="container">
-  <h6>Home / Categorias / <strong> <%= @category.capitalize%> </strong></h6>
+  <h6><%= link_to 'Home', root_path %> / <%= link_to 'Categorias', root_path %> / <strong> <%= @category.capitalize%> </strong></h6>
   <div class="row">
   <div class="row">
     <% @products.each do |product| %>

@@ -36,7 +36,7 @@ puts 'creating products'
     name: 'Château Pilsen',
     category: 'malte',
     origin:   'Belgica 🇧🇪',
-    quantity: 10,
+    quantity: rand(10..99),
     price: 12.5,
     image: 'https://valbier.com.br/image/cache/catalog/produtos/Malte_chateau_Pilsen_162-750x750.jpg',
     description:  'O malte de cor mais clara, bem modificado e que pode ser facilmente mosturado em uma infusão de temperatura única ou em decocção.
@@ -51,7 +51,7 @@ puts 'creating products'
     name: 'Château Peated (Defumado)',
     category: 'malte',
     origin:   'Belgica 🇧🇪',
-    quantity: 10,
+    quantity: rand(10..99),
     price: 14.69,
     image: 'http://www.brejarte.com.br/loja/image/cache/catalog/malte-chateau-special-b-castle-malting-100g-ccc-220x220.jpg',
     description:  'Produz um aroma e sabor inconfundíveis de malte defumado e
@@ -68,7 +68,7 @@ puts 'creating products'
     name: 'Château Vienna',
     category: 'malte',
     origin:   'Italia 🇮🇹',
-    quantity: 10,
+    quantity: rand(10..99),
     price: 15,
     image: 'http://www.brejarte.com.br/loja/image/cache/catalog/malte-chateau-special-b-castle-malting-100g-ccc-220x220.jpg',
     description:  'Produz um aroma e sabor inconfundíveis de malte defumado e
@@ -78,8 +78,46 @@ puts 'creating products'
                   ale com gás',
     user_id: User.find_by_name('admar').id
   )
-  # malte0.remote_image_url = "";
-  malte0.save
+  malte1.save
+
+  malte2 = Product.create(
+    name: 'Château Pale Ale',
+    category: 'malte',
+    origin:   'Alemanha 🇩🇪',
+    quantity: rand(10..99),
+    price: 22,
+    image: 'http://www.brejarte.com.br/loja/image/cache/catalog/malte-chateau-special-b-castle-malting-100g-ccc-220x220.jpg',
+    description:  'Geralmente usado como malte base ou em combinação com malte
+                  Château Pilsen 2RS para produzir um sabor de malte mais forte e cor adicional. Por
+                  ter uma cor mais intensa, este malte pode adicionar um tom dourado ao mosto. É
+                  usado com leveduras mais fortes para produzir cervejas Amber e Bitter. O malte
+                  Château Pale Ale é secado por mais tempo e geralmente é mais modificado,
+                  proporcionando um sabor mais pronunciado que o do Château Pilsen 2RS. As
+                  enzimas no malte Château Pale Ale podem comportar o uso de maltes especiais não
+                  enzimáticos.',
+    user_id: User.find_by_name('admar').id
+  )
+  malte2.save
+
+  malte3 = Product.create(
+    name: 'Château Munich Light®',
+    category: 'malte',
+    origin:   'Alemanha 🇩🇪',
+    quantity: rand(10..99),
+    price: 25,
+    image: 'http://www.brejarte.com.br/loja/image/cache/catalog/malte-chateau-special-b-castle-malting-100g-ccc-220x220.jpg',
+    description:  'Malte rico e dourado. Proporciona um aumento modesto na cor,
+                  próxima de um laranja agradável e dourado. Adiciona um sabor pronunciado de
+                  grãos maltados a vários estilos de cerveja sem afetar a estabilidade da espuma e
+                  corpo. Também é usado em pequenas quantidades em combinação com Pilsen 2RS
+                  para produzir cervejas de cor clara, melhorando o sabor maltado e proporcionando
+                  uma cor mais rica. Aprimora o sabor de algumas cervejas características',
+    user_id: User.find_by_name('admar').id
+  )
+  malte3.save
+
+  
+  
   # levedo = Product.create(
   #   name: 'levedo de qualidade',
   #   category: 'levedura',
