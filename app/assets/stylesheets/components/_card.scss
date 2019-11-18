@@ -91,3 +91,69 @@
 .product-btn {
   padding: 0px 55px 15px 55px;
 }
+
+.card-service {
+  padding: 16px;
+  margin: auto;
+  width: 400px;
+  background-color: #E6E6E6;
+  border-radius: 8px;
+}
+
+.card-service-top {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-service-top-image {
+  position: relative;
+  width: 50%;
+}
+
+.card-service-top-image .position-icon {
+  position: absolute;
+  color: #FD77A0;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.card-service-info {
+  padding-left: 16px;
+  width: 50%;
+}
+
+.card-service-info i {
+  color: #FBB434;
+}
+
+.card-service-middle {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  margin: 16px 0;
+}
+
+.card-service-bottom img {
+  object-fit: cover;
+  height: 70px;
+  flex-grow: 1;
+}
+
+.card-service-bottom img:first-child {
+  margin: 0;
+  margin-right: 8px;
+}
+
+.card-service-bottom img:last-child {
+  margin: 0;
+  margin-left: 8px;
+}
+
+.card-service-bottom {
+  display: flex;
+}
+
+/*.fancy-card img {
+  border-radius: 40px;
+}
+*/

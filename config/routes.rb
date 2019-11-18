@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   end
 
   resources :transactions, only: [:show, :index]
-  resources :services, only: [:index]
+
+  get '/services/', to: 'pages#services',  as: 'services'
 end
 
 
