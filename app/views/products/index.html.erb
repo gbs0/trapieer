@@ -10,8 +10,7 @@
       <% end %>
       <div class="col-xs-12 col-sm-6 col-md-3 card-product animated fadeInLeft">
         <!-- <div class="card" id="anchor" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path x %> ) ;"> -->
-        
-        <div class="card" id="anchor" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= product.image %> ) ;">
+        <div class="card" id="anchor" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= product.image %>);">
           <div class="card-description">
             <h2><%= product.name.capitalize %></h2>
           </div>
@@ -21,7 +20,7 @@
           <div class="product-details">
             <h5>Origem: <%= product.origin.capitalize %></h5>
             <h5>Tipo: <em><%= product.category.capitalize %></em></h5>
-            <h5>Preço/Kg: $<strong><%= product.price %></strong></h5>
+            <h5>Preço/Kg: $<strong><%= product.price %>,<%= rand(10..31) %></strong></h5>
             <h5>Anunciado há: <strong><%= rand(10..31) %><strong> dias</h5>
           </div>
           <div class="stars">
