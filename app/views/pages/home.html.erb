@@ -78,11 +78,3 @@
   </div>
 </div>
 
-<!-- <p><%= link_to 'Registrar-se', new_user_registration_path, class: "btn btn-treehouse", id:"home-btn"%></p> -->
-<div style="display: flex;">
-  <div style="justify-content: flex-end;">
-    <% unless user_signed_in? %>
-      <p><%= link_to 'Inscreva-se', new_user_registration_path, class: "btn btn-treehouse animated pulse infinite slower", id:"home-btn"%></p>
-    <% end  %>
-  </div>
-</div>
