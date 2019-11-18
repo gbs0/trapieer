@@ -6,7 +6,9 @@
   <div class="text-center arrow-box"><i class="fas fa-chevron-circle-down animated bounce infinite slow"></i></div>
 </div>
 <br>
-  <h2 id="home-h2">Principais categorias</h2>
+
+<h2 id="home-h2">Principais categorias</h2>
+
 <div class="container">
   <div class="content">
     <div class="col-xs-12 col-sm-6 col-md-3 animated fadeInDown slow">
@@ -35,6 +37,40 @@
         <div class="card-description">
           <h2>Levedura</h2>
           <p>Para todos os tipos de fermentação</p>
+        </div>
+        <%= link_to "", products_path(category:'levedura'), class: 'card-link' %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="content">
+    <div class="col-xs-12 col-sm-6 col-md-3 animated fadeInDown slow">
+      <div class="card_category" id="anchor" style="background-image: linear-gradient(-225deg, rgba(255,127,0,0.6) 0%, rgba(0,36,61,0.3) 50%), url('https://imagens.publico.pt/imagens.aspx/1337586?tp=UH&db=IMAGENS&type=JPG&w=837');">
+        <a class="card-link" href="#"></a>
+        <div class="card-description">
+          <h2>Fornecedores</h2>
+          <p> Os melhores fornecedores da região! </p>
+        </div>
+        <%= link_to "", products_path(category:'lupulo'), class: 'card-link' %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3 animated fadeInDown slow">
+      <div class="card_category" id="anchor" style="background-image: linear-gradient(-225deg, rgba(255,127,0,0.6) 0%, rgba(0,36,61,0.3) 50%), url('https://novonegocio.com.br/wp-content/uploads/2015/03/fabrica-de-cerveja.jpg');">
+        <a class="card-link" href="#"></a>
+        <div class="card-description">
+          <h2>Equipamento</h2>
+          <p> Encontre os melhores equipamentos! </p>
+        </div>
+        <%= link_to "", products_path(category:'malte'), class: 'card-link' %>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-3 animated fadeInDown slow">
+      <div class="card_category" id="anchor" style="background-image: linear-gradient(-225deg, rgba(255,127,0,0.6) 0%, rgba(0,36,61,0.3) 50%), url('http://www.4truck.com.br/blog/wp-content/uploads/2017/12/ba%C3%BA-de-caminh%C3%A3o-transporte-de-carga.jpg');">
+        <a class="card-link" href="#"></a>
+        <div class="card-description">
+          <h2>Serviços</h2>
+          <p> Serviços p/ todos os tipos de cervejeiros! </p>
         </div>
         <%= link_to "", products_path(category:'levedura'), class: 'card-link' %>
       </div>
