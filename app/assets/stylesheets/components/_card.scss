@@ -94,12 +94,17 @@
 
 .card-service {
   padding: 16px;
-  margin: auto;
   width: 400px;
+  margin: 0 1em;
   background-color: #E6E6E6;
   border-radius: 8px;
 }
 
+.card-service:hover {
+  transition: .2s;
+  transform: scale(1.1);
+  box-shadow: 0 10px 6px -6px #777;
+}
 .card-service-top {
   display: flex;
   justify-content: space-around;
